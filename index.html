@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Café Aurora, un sitio web escolar de ejemplo para practicar alojamiento y publicación web.">
+  <title>Café Aurora</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%231d3557'/%3E%3Cpath d='M16 23h29v13a13 13 0 0 1-13 13h-3a13 13 0 0 1-13-13V23Z' fill='%23f4a261'/%3E%3Cpath d='M45 27h3a7 7 0 0 1 0 14h-4' fill='none' stroke='%23fff7ed' stroke-width='4'/%3E%3Cpath d='M24 16c-3-4 3-5 0-9M34 16c-3-4 3-5 0-9' fill='none' stroke='%23fff7ed' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+  <header class="site-header">
+    <a class="brand" href="#inicio" aria-label="Café Aurora, inicio">
+      <span class="brand-mark" aria-hidden="true">☕</span>
+      <span>Café Aurora</span>
+    </a>
+    <button class="menu-button" id="menuButton" type="button" aria-expanded="false" aria-controls="mainNav">
+      Menú
+    </button>
+    <nav class="main-nav" id="mainNav" aria-label="Navegación principal">
+      <a href="#menu">Menú</a>
+      <a href="#nosotros">Nosotros</a>
+      <a href="#visitanos">Visítanos</a>
+    </nav>
+  </header>
+
+  <main id="contenido">
+    <section class="hero" id="inicio">
+      <div class="hero-copy">
+        <p class="eyebrow">Café local · Proyecto escolar 5D</p>
+        <h1>Tu pausa favorita comienza aquí</h1>
+        <p class="hero-text">Café de especialidad, pan recién horneado y un espacio tranquilo para compartir o estudiar.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#menu">Ver el menú</a>
+          <button class="button button-secondary" id="promoButton" type="button">Descubrir promoción</button>
+        </div>
+        <p class="promo-message" id="promoMessage" role="status" aria-live="polite"></p>
+      </div>
+      <figure class="hero-image-wrap">
+        <img class="hero-image" src="img/cafe-hero.png" alt="Taza de café y pan dulce sobre la barra de una cafetería iluminada por la mañana">
+      </figure>
+    </section>
+
+    <section class="section" id="menu">
+      <div class="section-heading">
+        <p class="eyebrow">Sabores sencillos</p>
+        <h2>Menú recomendado</h2>
+        <p>Una selección breve para comenzar bien el día.</p>
+      </div>
+      <div class="menu-grid">
+        <article class="menu-card">
+          <span class="menu-icon" aria-hidden="true">☕</span>
+          <div>
+            <h3>Latte Aurora</h3>
+            <p>Espresso, leche cremosa y un toque de canela.</p>
+          </div>
+          <strong>$58</strong>
+        </article>
+        <article class="menu-card">
+          <span class="menu-icon" aria-hidden="true">🥐</span>
+          <div>
+            <h3>Croissant de almendra</h3>
+            <p>Horneado cada mañana con relleno suave de almendra.</p>
+          </div>
+          <strong>$46</strong>
+        </article>
+        <article class="menu-card">
+          <span class="menu-icon" aria-hidden="true">🧊</span>
+          <div>
+            <h3>Cold brew cítrico</h3>
+            <p>Café frío de extracción lenta con naranja fresca.</p>
+          </div>
+          <strong>$62</strong>
+        </article>
+      </div>
+    </section>
+
+    <section class="story" id="nosotros">
+      <div>
+        <p class="eyebrow">Nuestra idea</p>
+        <h2>Un rincón para bajar el ritmo</h2>
+      </div>
+      <p>Café Aurora nació como una cafetería de barrio: recetas claras, ingredientes cercanos y atención amable. Este sitio es un ejemplo académico y no representa un negocio real.</p>
+    </section>
+
+    <section class="section visit" id="visitanos">
+      <div class="visit-info">
+        <p class="eyebrow">Planea tu visita</p>
+        <h2>Te esperamos</h2>
+        <dl>
+          <div>
+            <dt>Horario</dt>
+            <dd>Lunes a sábado · 8:00 a 20:00</dd>
+          </div>
+          <div>
+            <dt>Ubicación</dt>
+            <dd>Avenida Central 125 · Minatitlán, Veracruz</dd>
+          </div>
+          <div>
+            <dt>Contacto</dt>
+            <dd>hola@cafeaurora.example</dd>
+          </div>
+        </dl>
+      </div>
+
+      <form class="contact-form" id="contactForm">
+        <h3>Envíanos un mensaje</h3>
+        <p>Formulario demostrativo: no envía información a un servidor.</p>
+        <label for="nombre">Nombre</label>
+        <input id="nombre" name="nombre" type="text" autocomplete="name" required>
+
+        <label for="mensaje">Mensaje</label>
+        <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+
+        <button class="button button-primary" type="submit">Enviar demostración</button>
+        <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>© <span id="currentYear"></span> Café Aurora · Sitio académico de ejemplo para 5D</p>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
